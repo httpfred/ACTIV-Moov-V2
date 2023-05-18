@@ -1,0 +1,139 @@
+<div class="elts">
+    <form action="" method="" class="form" id="form">
+        <div class="elts">
+            <fieldset class="form-elts">
+                <legend>Demandeur</legend>
+                <div class="form-elts__block">
+
+                    <label>
+                        Matricule
+                        <input type="text" name="name" placeholder="" id="demandeur_matricule" />
+                    </label>
+                    <label>
+                        Nom & Prénoms
+                        <input type="number" name="name" placeholder="" id="demandeur_nom_prenom" />
+                    </label>
+                    <label>
+                        Categorie
+                        <input type="text" name="name" placeholder="" id="demandeur_categorie" />
+                    </label>
+                </div>
+                <div class="form-elts__block">
+
+                    <label>
+                        Direction
+                        <input type="text" name="name" placeholder="" id="demandeur_direction" />
+                    </label>
+                    <label>
+                        Division
+                        <input type="text" name="name" placeholder="" id="demandeur_division" />
+                    </label>
+                    <label>
+                        Service
+                        <input type="text" name="name" placeholder="" id="demandeur_service" />
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="form-elts">
+                <legend>
+                    Interimaire
+                    <span class="note">
+                        L'interim ne concerne que les validations dans Moovinside.
+                        Toutes vos taches à venir seront automatiquement ré-affeccté à
+                        l'interimaire durant la periode de la mission
+                    </span>
+                </legend>
+                <div class="form-elts__block">
+
+                    <label>
+                        Nom & Prénoms
+                        <input type="number" name="name" placeholder="" id="nom_prenom_interim" />
+                    </label>
+                    <label>
+                        Matricule
+                        <input type="text" name="name" placeholder="" id="interimaire_matricule" />
+                    </label>
+                    <label>
+                        Categorie
+                        <input type="text" name="name" placeholder="" id="interimaire_categorie" />
+                    </label>
+                    <label>
+                        Direction
+                        <input type="text" name="name" placeholder="" id="interimaire_direction" />
+                    </label>
+                </div>
+
+            </fieldset>
+            <fieldset class="form-elts">
+                <legend>Mission</legend>
+                <div class="form-elts__block">
+                    <label>
+                        Periode du
+                        <input type="date" name="name" placeholder="" id="duree_debut" />
+                    </label>
+                    <label>
+                        Au
+                        <input type="date" name="name" placeholder="" id="duree_fin" />
+                    </label>
+                </div>
+                <div class="form-elts__block">
+                    Zone Géographique
+                    <label>
+                        <input type="checkbox" name="CI" placeholder="" id="zone_ci" />Cote
+                        d'ivoire
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Afrique" placeholder="" id="zone_afrique" />Afrique
+                    </label>
+                    <label>
+                        <input type="checkbox" name="Afrique" placeholder="" id="zone_afrique_sud" />Hors Afrique /
+                        Afrique du sud
+                    </label>
+                </div>
+                <div class="form-elts__block">
+                    <label>
+                        Motif
+                        <input type="text" name="name" placeholder="" id="motif" />
+                    </label>
+                    <label>
+                        Destination
+                        <input type="text" name="name" placeholder="" id="destination" />
+                    </label>
+                    <label>
+                        Commentaire
+                        <input type="text" name="name" placeholder="" id="commentaire" />
+                    </label>
+                    <label>
+                        Site BTS
+                        <input type="text" name="name" placeholder="" id="siteBTS" />
+                    </label>
+                </div>
+                <div class="form-elts__block">
+                    <label>
+                        Caisse de paiement
+                        <input type="text" name="name" placeholder="" id="caisse_de_paiement" />
+                    </label>
+                    <label>
+                        Mode de paiement
+                        <input type="text" name="name" placeholder="" id="mode_de_paiement" />
+                    </label>
+                    <label>
+                        Doc justificatifs
+                        <input type="file" name="name" placeholder="Importer un fichier" id="doc_justificatifs" />
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="form-elts">
+                <legend>Frais de mission</legend>
+            </fieldset>
+        </div>
+        <div class="note note-bas">
+            NB: Le nombre total de jours accordés au titre des permissions exceptionnelles elt
+            limité à 10 jours ouvrables par employé et par an
+        </div>
+        <div class="input-optn">
+            <input class="Submit" type="submit" value="Annuler demande" />
+            <input class="Submit" id="validate" type="submit" value="Valider" />
+        </div>
+    </form>
+</div>

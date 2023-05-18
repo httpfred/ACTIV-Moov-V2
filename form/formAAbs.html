@@ -1,0 +1,127 @@
+<div class="elts">
+    <form action="" method="" class="form" id="form">
+        <div class="elts">
+            <fieldset class="form-elts">
+                <legend>Demandeur</legend>
+                <div class="form-elts__block">
+
+                    <label>
+                        Matricule
+                        <input type="text" name="name" placeholder="" id="demandeur_matricule" />
+                    </label>
+                    <label>
+                        Nom & Prénoms
+                        <input type="number" name="name" placeholder="" id="demandeur_nom_prenom" />
+                    </label>
+                    <label>
+                        Categorie
+                        <input type="text" name="name" placeholder="" id="demandeur_categorie" />
+                    </label>
+                </div>
+                <div class="form-elts__block">
+
+                    <label>
+                        Direction
+                        <input type="text" name="name" placeholder="" id="demandeur_direction" />
+                    </label>
+                    <label>
+                        Division
+                        <input type="text" name="name" placeholder="" id="demandeur_division" />
+                    </label>
+                    <label>
+                        Service
+                        <input type="text" name="name" placeholder="" id="demandeur_service" />
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="form-elts">
+                <legend>
+                    Interimaire
+                    <span class="note">
+                        L'interim ne concerne que les validations dans Moovinside.
+                        Toutes vos taches à venir seront automatiquement ré-affeccté à
+                        l'interimaire durant la periode de la mission
+                    </span>
+                </legend>
+                <div class="form-elts__block">
+
+                    <label>
+                        Nom & Prénoms
+                        <input type="number" name="name" placeholder="" id="interimaire_nom_prenom" />
+                    </label>
+                    <label>
+                        Matricule
+                        <input type="text" name="name" placeholder="" id="interimaire_matricule" />
+                    </label>
+                    <label>
+                        Categorie
+                        <input type="text" name="name" placeholder="" id="interimaire_categorie" />
+                    </label>
+                    <label>
+                        Direction
+                        <input type="text" name="name" placeholder="" id="interimaire_direction" />
+                    </label>
+                </div>
+
+            </fieldset>
+            <fieldset class="form-elts">
+                <legend>Motif de la demande</legend>
+                <div class="radio">
+                    Nature Absence :
+                    <div class="form-elts__block" style="margin: auto;">
+                        <label>
+                            <input type="radio" name="Absence" id="absence_exceptionnelle"
+                                value="Absence exceptionnelle" />
+                            Absence exceptionnelle
+                        </label>
+                        <label for=""></label>
+                        <label>
+                            <input type="radio" name="Absence" id="permission_exceptionnelle"
+                                value="Permission exceptionnelle" />
+                            Permission exceptionnelle
+                        </label>
+                    </div>
+                </div>
+                <div class="form-elts__block">
+
+                    <label>
+                        Motif
+                        <input type="text" name="name" placeholder="" id="motif" />
+                    </label>
+                    <label>
+                        Durée
+                        <input type="number" name="name" placeholder="" id="duree" />
+                    </label>
+                    <label>
+                        Date de debut
+                        <input type="date" name="name" placeholder="" id="date_de_debut" />
+                    </label>
+                </div>
+                <div class="form-elts__block">
+
+                    <label>
+                        Date de Fin
+                        <input type="date" name="name" placeholder="" id="date_de_fin" />
+                    </label>
+                    <label>
+                        Date de reprise
+                        <input type="date" name="name" placeholder="" id="date_de_reprise" />
+                    </label>
+                    <label>
+                        Doc justificatifs
+                        <input type="file" name="name" placeholder="Importer un fichier" id="doc_justificatifs" />
+                    </label>
+                </div>
+
+            </fieldset>
+        </div>
+        <div class="note note-bas">
+            NB: Le nombre total de jours accordés au titre des permissions exceptionnelles elt
+            limité à 10 jours ouvrables par employé et par an
+        </div>
+        <div class="input-optn">
+            <input class="Submit" type="submit" value="Annuler demande" />
+            <input class="Submit" id="validate" type="submit" value="Valider" />
+        </div>
+    </form>
+</div>

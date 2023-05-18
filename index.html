@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asserts/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="appel.js" defer></script>
+    <script src="appelForm.js" defer></script>
+
+    <title>Moov interface</title>
+</head>
+
+<body>
+    <header class="container-fluid border-bottom header" id="header">
+        <div class="container-fluid">
+            <!-- <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> -->
+            <div class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-between" id="">
+
+                <div class="d-flex">
+                    <button class="btn " id="btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-justify text-light " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+                    <img src="./asserts/img/moov-africa-sans-fond.png" alt="" width="100" height="" />
+                    <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-light text-decoration-none">
+                        Home
+                    </a>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end ddc" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Formulaire de demande de congés</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="formDDC">
+                        <!--
+                        <div class="elts">
+                            <form action="" method="" class="form" id="form">
+                                <div class="elts">
+                                    <fieldset class="form-elts">
+                                        <legend>Demandeur</legend>
+                                        <div class="form-elts__block">
+                                            <label>
+                                                Matricule
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_matricule" />
+                                            </label>
+                                            <label>
+                                                Nom & Prénoms
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_nom_prenom" />
+                                            </label>
+                                            <label>
+                                                Categorie
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_categorie" />
+                                            </label>
+                                        </div>
+
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Direction
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_direction" />
+                                            </label>
+                                            <label>
+                                                Division
+                                                <input type="text" name="name" placeholder="" id="demandeur_division" />
+                                            </label>
+                                            <label>
+                                                Service
+                                                <input type="text" name="name" placeholder="" id="demandeur_service" />
+                                            </label>
+                                        </div>
+
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>
+                                            Interimaire
+                                            <span class="note">
+                                                L'interim ne concerne que les validations dans Moovinside.
+                                                Toutes vos taches à venir seront automatiquement ré-affeccté à
+                                                l'interimaire durant la periode de la mission
+                                            </span>
+                                        </legend>
+                                        <div class="form-elts__block">
+                                            <label>
+                                                Nom & Prénoms
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_nom_prenom" />
+                                            </label>
+                                            <label>
+                                                Matricule
+                                                <input type="text" name="name" placeholder=""
+                                                    id="intermaire_matricule" />
+                                            </label>
+                                            <label>
+                                                Categorie
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_categoriee" />
+                                            </label>
+                                            <label>
+                                                Direction
+                                                <input type="text" name="name" placeholder=""
+                                                    id="intermaire_direction" />
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>Motif de la demande</legend>
+                                        <div class="form-elts__block">
+                                            <label>
+                                                Nature du congés
+                                                <input type="text" name="name" placeholder="" id="nature_du_conges" />
+                                            </label>
+                                            <label>
+                                                Nombre de Jours
+                                                <input type="number" name="name" placeholder="" id="nombre_de_jour" />
+                                            </label>
+                                            <label>
+                                                Date de depart souhaité
+                                                <input type="date" name="name" placeholder="" id="date_de_depart" />
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>Adresse pendant les congés</legend>
+                                        <div class="form-elts__block">
+                                            <label>
+                                                Domicile habituel
+                                                <input type="text" name="name" placeholder="" id="domicile_habituel" />
+                                            </label>
+                                            <label>
+                                                Contact téléphonique
+                                                <input type="tel" name="name" placeholder=""
+                                                    id="contact_telephonique" />
+                                            </label>
+                                            <label>
+                                                Personne à contacter
+                                                <input type="text" name="name" placeholder=""
+                                                    id="personne_a_contacter" />
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="note note-bas">
+                                    NB: La demande de congés une fois validée, doit etre transmise à la
+                                    DRHO (Gestion Administrative du Personnel) le 15 du mois M-1 précedant
+                                    la date de depart en congé
+                                </div>
+                                <div class="input-optn">
+                                    <input class="Submit" type="submit" value="Annuler demande" />
+                                    <input class="Submit" id="validate" type="submit" value="Valider" />
+                                </div>
+                            </form>
+                        </div>
+                        -->
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-end aabs" tabindex="-1" id="offcanvasRightTwo"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Formulaire d'autorisation d'absence</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="formAAbs">
+                        <!--
+                        <div class="elts">
+                            <form action="" method="" class="form" id="form">
+                                <div class="elts">
+                                    <fieldset class="form-elts">
+                                        <legend>Demandeur</legend>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Matricule
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_matricule" />
+                                            </label>
+                                            <label>
+                                                Nom & Prénoms
+                                                <input type="number" name="name" placeholder=""
+                                                    id="demandeur_nom_prenom" />
+                                            </label>
+                                            <label>
+                                                Categorie
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_categorie" />
+                                            </label>
+                                        </div>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Direction
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_direction" />
+                                            </label>
+                                            <label>
+                                                Division
+                                                <input type="text" name="name" placeholder="" id="demandeur_division" />
+                                            </label>
+                                            <label>
+                                                Service
+                                                <input type="text" name="name" placeholder="" id="demandeur_service" />
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>
+                                            Interimaire
+                                            <span class="note">
+                                                L'interim ne concerne que les validations dans Moovinside.
+                                                Toutes vos taches à venir seront automatiquement ré-affeccté à
+                                                l'interimaire durant la periode de la mission
+                                            </span>
+                                        </legend>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Nom & Prénoms
+                                                <input type="number" name="name" placeholder=""
+                                                    id="interimaire_nom_prenom" />
+                                            </label>
+                                            <label>
+                                                Matricule
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_matricule" />
+                                            </label>
+                                            <label>
+                                                Categorie
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_categorie" />
+                                            </label>
+                                            <label>
+                                                Direction
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_direction" />
+                                            </label>
+                                        </div>
+
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>Motif de la demande</legend>
+                                        <div class="radio">
+                                            Nature Absence :
+                                            <div class="form-elts__block" style="margin: auto;">
+                                                <label>
+                                                    <input type="radio" name="Absence" id="absence_exceptionnelle"
+                                                        value="Absence exceptionnelle" />
+                                                    Absence exceptionnelle
+                                                </label>
+                                                <label for=""></label>
+                                                <label>
+                                                    <input type="radio" name="Absence" id="permission_exceptionnelle"
+                                                        value="Permission exceptionnelle" />
+                                                    Permission exceptionnelle
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Motif
+                                                <input type="text" name="name" placeholder="" id="motif" />
+                                            </label>
+                                            <label>
+                                                Durée
+                                                <input type="number" name="name" placeholder="" id="duree" />
+                                            </label>
+                                            <label>
+                                                Date de debut
+                                                <input type="date" name="name" placeholder="" id="date_de_debut" />
+                                            </label>
+                                        </div>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Date de Fin
+                                                <input type="date" name="name" placeholder="" id="date_de_fin" />
+                                            </label>
+                                            <label>
+                                                Date de reprise
+                                                <input type="date" name="name" placeholder="" id="date_de_reprise" />
+                                            </label>
+                                            <label>
+                                                Doc justificatifs
+                                                <input type="file" name="name" placeholder="Importer un fichier"
+                                                    id="doc_justificatifs" />
+                                            </label>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                                <div class="note note-bas">
+                                    NB: Le nombre total de jours accordés au titre des permissions exceptionnelles elt
+                                    limité à 10 jours ouvrables par employé et par an
+                                </div>
+                                <div class="input-optn">
+                                    <input class="Submit" type="submit" value="Annuler demande" />
+                                    <input class="Submit" id="validate" type="submit" value="Valider" />
+                                </div>
+                            </form>
+                        </div>
+                        -->
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end fdm" tabindex="-1" id="offcanvasRightThree"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Fin de mission</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="formFDM">
+                        <!--
+                        <div class="elts">
+                            <form action="" method="" class="form" id="form">
+                                <div class="elts">
+                                    <fieldset class="form-elts">
+                                        <legend>Demandeur</legend>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Matricule
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_matricule" />
+                                            </label>
+                                            <label>
+                                                Nom & Prénoms
+                                                <input type="number" name="name" placeholder=""
+                                                    id="demandeur_nom_prenom" />
+                                            </label>
+                                            <label>
+                                                Categorie
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_categorie" />
+                                            </label>
+                                        </div>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Direction
+                                                <input type="text" name="name" placeholder=""
+                                                    id="demandeur_direction" />
+                                            </label>
+                                            <label>
+                                                Division
+                                                <input type="text" name="name" placeholder="" id="demandeur_division" />
+                                            </label>
+                                            <label>
+                                                Service
+                                                <input type="text" name="name" placeholder="" id="demandeur_service" />
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>
+                                            Interimaire
+                                            <span class="note">
+                                                L'interim ne concerne que les validations dans Moovinside.
+                                                Toutes vos taches à venir seront automatiquement ré-affeccté à
+                                                l'interimaire durant la periode de la mission
+                                            </span>
+                                        </legend>
+                                        <div class="form-elts__block">
+
+                                            <label>
+                                                Nom & Prénoms
+                                                <input type="number" name="name" placeholder=""
+                                                    id="nom_prenom_interim" />
+                                            </label>
+                                            <label>
+                                                Matricule
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_matricule" />
+                                            </label>
+                                            <label>
+                                                Categorie
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_categorie" />
+                                            </label>
+                                            <label>
+                                                Direction
+                                                <input type="text" name="name" placeholder=""
+                                                    id="interimaire_direction" />
+                                            </label>
+                                        </div>
+
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>Mission</legend>
+                                        <div class="form-elts__block">
+                                            <label>
+                                                Periode du
+                                                <input type="date" name="name" placeholder="" id="duree_debut" />
+                                            </label>
+                                            <label>
+                                                Au
+                                                <input type="date" name="name" placeholder="" id="duree_fin" />
+                                            </label>
+                                        </div>
+                                        <div class="form-elts__block">
+                                            Zone Géographique
+                                            <label>
+                                                <input type="checkbox" name="CI" placeholder="" id="zone_ci" />Cote
+                                                d'ivoire
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="Afrique" placeholder=""
+                                                    id="zone_afrique" />Afrique
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" name="Afrique" placeholder=""
+                                                    id="zone_afrique_sud" />Hors Afrique /
+                                                Afrique du sud
+                                            </label>
+                                        </div>
+                                        <div class="form-elts__block">
+                                            <label>
+                                                Motif
+                                                <input type="text" name="name" placeholder="" id="motif" />
+                                            </label>
+                                            <label>
+                                                Destination
+                                                <input type="text" name="name" placeholder="" id="destination" />
+                                            </label>
+                                            <label>
+                                                Commentaire
+                                                <input type="text" name="name" placeholder="" id="commentaire" />
+                                            </label>
+                                            <label>
+                                                Site BTS
+                                                <input type="text" name="name" placeholder="" id="siteBTS" />
+                                            </label>
+                                        </div>
+                                        <div class="form-elts__block">
+                                            <label>
+                                                Caisse de paiement
+                                                <input type="text" name="name" placeholder="" id="caisse_de_paiement" />
+                                            </label>
+                                            <label>
+                                                Mode de paiement
+                                                <input type="text" name="name" placeholder="" id="mode_de_paiement" />
+                                            </label>
+                                            <label>
+                                                Doc justificatifs
+                                                <input type="file" name="name" placeholder="Importer un fichier"
+                                                    id="doc_justificatifs" />
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-elts">
+                                        <legend>Frais de mission</legend>
+                                    </fieldset>
+                                </div>
+                                <div class="note note-bas">
+                                    NB: Le nombre total de jours accordés au titre des permissions exceptionnelles elt
+                                    limité à 10 jours ouvrables par employé et par an
+                                </div>
+                                <div class="input-optn">
+                                    <input class="Submit" type="submit" value="Annuler demande" />
+                                    <input class="Submit" id="validate" type="submit" value="Valider" />
+                                </div>
+                            </form>
+                        </div>
+                        -->
+
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-end rfdm" tabindex="-1" id="offcanvasRightFour"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Regulation de Fin de mission</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="formRFDM">
+
+                       
+
+
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-end sdc" tabindex="-1" id="offcanvasRightFive"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Sortie de caisse</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="formSDC">
+                        <!--Form-->
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end rdfm" tabindex="-1" id="offcanvasRightSix"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Regulation de Sortie de caisse</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="formRSDC">
+                        <!--Form-->
+
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-start text-dark" data-bs-scroll="true" data-bs-backdrop="false"
+                    tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed"  type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                        aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Demande de congés
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body d-flex flex-column">
+                                        <span class="" type="button" id="accordion-buttonDDC" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                            Effectuer une demande
+                                        </span>
+                                        <a href="#!" id="chargerDonneesDDCEncours">Demande en cours</a>
+                                        <a href="#!" id="chargerDonneesDDCValide">Demande validé</a>
+                                        <a href="#!" id="chargerDonneesDDCRejete">Demande réjeté</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Autorisation d'absence
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTWO" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body d-flex flex-column">
+                                        <span class="" type="button" id="accordion-buttonAAbs" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRightTwo" aria-controls="offcanvasRight">
+                                            Effectuer une demande
+                                        </span>
+                                        <a href="#!" id="chargerDonneesAAbsEncours">Demande en cours</a>
+                                        <a href="#!" id="chargerDonneesAAbsValide">Demande validé</a>
+                                        <a href="#!" id="chargerDonneesAAbsRejete">Demande réjeté</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Fin de mission
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body d-flex flex-column">
+                                        <span class="" type="button" id="accordion-buttonFDM" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRightThree" aria-controls="offcanvasRight">
+                                            Effectuer une demande
+                                        </span>
+                                        <a href="#!" id="chargerDonneesFDMEncours">Demande en cours</a>
+                                        <a href="#!" id="chargerDonneesFDMValide">Demande validé</a>
+                                        <a href="#!" id="chargerDonneesFDMRejete">Demande réjeté</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour">
+                                        Regulation de Fin de mission
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body d-flex flex-column">
+                                        <span class="" type="button" id="accordion-buttonRFDM" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRightFour" aria-controls="offcanvasRight">
+                                            Effectuer une demande
+                                        </span>
+                                        <a href="#!" id="chargerDonneesRDFMEncours">Demande en cours</a>
+                                        <a href="#!" id="chargerDonneesRDFMValide">Demande validé</a>
+                                        <a href="#!" id="chargerDonneesRDFMRejete">Demande réjeté</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                        aria-controls="flush-collapseFive">
+                                        Sortie de caisse
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body d-flex flex-column">
+                                        <span class="" type="button" id="accordion-buttonSDC" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRightFive" aria-controls="offcanvasRight">
+                                            Effectuer une demande
+                                        </span>
+                                        <a href="#!" id="chargerDonneesSDCEncours">Demande en cours</a>
+                                        <a href="#!" id="chargerDonneesSDCValide">Demande validé</a>
+                                        <a href="#!" id="chargerDonneesSDCRejete">Demande réjeté</a>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                        aria-controls="flush-collapseSix">
+                                        Regulation de Sortie de caisse
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body d-flex flex-column">
+                                        <span class="" type="button" id="accordion-buttonRSDC" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasRightSix" aria-controls="offcanvasRight">
+                                            Effectuer une demande
+                                        </span>
+                                        <a href="#!" id="chargerDonneesRSDCEncours">Demande en cours</a>
+                                        <a href="#!" id="chargerDonneesRSDCValide">Demande validé</a>
+                                        <a href="#!" id="chargerDonneesRSDCRejete">Demande réjeté</a>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        Accordion Item #2
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is
+                                        intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                        second item's accordion body. Let's imagine this being filled with some actual
+                                        content.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        Accordion Item #3
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is
+                                        intended to demonstrate the <code>.accordion-flush</code> class. This is the
+                                        third item's accordion body. Nothing more exciting happening here in terms of
+                                        content, but just filling up the space to make it look, at least at first
+                                        glance, a bit more representative of how this would look in a real-world
+                                        application.</div>
+                                </div>
+                            </div>
+                            -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown d-flex  align-self-lg-end text-end p-2">
+                    <span class="text-light pe-1">Youssouf Ouattara</span>
+                    <a href="#" class="d-block link-dark text-decoration-none text-light dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./asserts/img/moov-africa-sans-fond.png" alt="" width="32" height="32"
+                            class="rounded-circle bg-light">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="#!" id="chargerDonneesProfil">Mon profil</a></li>
+                        <li><a class="dropdown-item" href="#">Parametre</a></li>
+                        <li><a class="dropdown-item" href="#">Historique</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="jumbotron jumbotron text-dark p-3" id="jumbotron"
+            style="background-image: url('./asserts/img/import2.jpg'); background-repeat: no-repeat; background-position: center; background-size: 100%;">
+            <div class="container">
+                <h1 class="display-4 ">Moov demande</h1>
+                <p class="lead fw-bold">Espace applicatif de Moov Africa
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container container--first">
+
+        <div class="row">
+            <div class="col">
+                <h2 class="bord-title"></h2>
+            </div>
+        </div>
+
+        <div class="mt-5 mb-5" id="reponseAjax">
+
+            <div class="row mt-5 mb-5">
+                <div class="col">
+                    <h4 class="text-primary">Utilisateur,</h4>
+                    <p>Bienvenue sur votre espace personnel</p>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="row mt-4" id="section">
+                <div class="col-6">
+                    <section class="sect1">
+                        <h3 class="type-document text-light" style="background-color: #005bA4;">
+                            <img class="docment-comment" src="" alt="" />
+                            <span>Historique de validation </span>
+                        </h3>
+                    </section>
+                    <!-- <Table /> -->
+                    <div>
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Date</th>
+                                    <th>Decision</th>
+                                    <th>Commentaire</th>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>20/02/2023</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>20/12/2023</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>25/11/2022</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>10/06/2019</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <section class="sect1">
+                        <h3 class="type-document text-light" style="background-color: #005bA4;">
+                            <img class="docment-comment" src="" alt="" />
+                            <span>Rapport</span>
+                        </h3>
+                    </section>
+                    <!-- <Table /> -->
+                    <div>
+                        <div class="table-container">
+                            <table>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Date</th>
+                                    <th>Decision</th>
+                                    <th>Commentaire</th>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>20/02/2023</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>20/12/2023</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>25/11/2022</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                                <tr class="rang">
+                                    <td>Fred Ahoussi</td>
+                                    <td>10/06/2019</td>
+                                    <td><span class="succed">Effectuée</span></td>
+                                    <td>Ceci est un commentaire</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

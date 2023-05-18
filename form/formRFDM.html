@@ -1,0 +1,158 @@
+<div class="elts">
+    <form action="" method="" class="form" id="form">
+        <div class="elts">
+            <legend>Demandeur</legend>
+            <div class="form-elts__block">
+
+                <label>
+                    Matricule
+                    <input type="text" name="name" placeholder="" id="demandeur_matricule" />
+                </label>
+                <label>
+                    Nom & Prénoms
+                    <input type="number" name="name" placeholder="" id="demandeur_nom_prenom" />
+                </label>
+                <label>
+                    Categorie
+                    <input type="text" name="name" placeholder="" id="demandeur_categorie" />
+                </label>
+            </div>
+            <div class="form-elts__block">
+
+                <label>
+                    Direction
+                    <input type="text" name="name" placeholder="" id="demandeur_direction" />
+                </label>
+                <label>
+                    Division
+                    <input type="text" name="name" placeholder="" id="demandeur_division" />
+                </label>
+                <label>
+                    Service
+                    <input type="text" name="name" placeholder="" id="demandeur_service" />
+                </label>
+            </div>
+            </fieldset>
+            <fieldset class="form-elts">
+                <legend>
+                    Regularisation de la mission
+                    <span class="note">
+                    </span>
+                </legend>
+                <div class="form-elts__block">
+                    <p>Certication de l'execution effective de la mission</p>
+                    <label>
+                        <input type="radio" name="mission" value="" placeholder=""
+                            id="mission_effectuee" />
+                        La mission a été effectuée
+                    </label>
+                    <label>
+                        <input type="radio" name="mission" value="" placeholder=""
+                            id="mission_non_effectuee" />
+                        La mission n'a été effectuée
+                    </label>
+                </div>
+                <div class="form-elts__block">
+                    <p>Remboursement des frais complementaires</p>
+                    <label>
+                        Avance N°
+                        <input type="number" name="" value="" placeholder=""
+                            id="avance_numero" />
+                    </label>
+                    <label>
+                        Du
+                        <input type="date" name="" value="" placeholder="" id="avance_date" />
+                    </label>
+                </div>
+                <table className="form-table">
+                    <tr>
+                        <th>Date debut</th>
+                        <th>Date Fin</th>
+                        <th>Libellé</th>
+                        <th>Nbre</th>
+                        <th>Forfait</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id="date_debut" /></td>
+                        <td><input type="date" name="" id="date_fin" /></td>
+                        <td>Hotel/Nuits</td>
+                        <td><input type="text" name="" id="hotel_nuit_nombre" /></td>
+                        <td><input type="text" name="" id="hotel_nuit_forfait" /></td>
+                        <td><input type="text" name="" id="hotel_nuit_total" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id="" /></td>
+                        <td><input type="date" name="" id="" /></td>
+                        <td>Repas/Jours</td>
+                        <td><input type="text" name="" id="repas_jour_nombre" /></td>
+                        <td><input type="text" name="" id="repas_jour_forfait" /></td>
+                        <td><input type="text" name="" id="repas_jour_total" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id="" /></td>
+                        <td><input type="date" name="" id="" /></td>
+                        <td>Frais de transport</td>
+                        <td><input type="text" name="" id="frais_de_transport_nombre" /></td>
+                        <td><input type="text" name="" id="frais_de_transport_forfait" /></td>
+                        <td><input type="text" name="" id="frais_de_transport_total" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="" id="" /></td>
+                        <td><input type="date" name="" id="" /></td>
+                        <td>Autre frais à justifier</td>
+                        <td><input type="text" name="" id="autre_frais_a_justifier_nombre" />
+                        </td>
+                        <td><input type="text" name="" id="autre_frais_a_justifier_forfait" />
+                        </td>
+                        <td><input type="text" name="" id="autre_frais_a_justifier_total" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="colspan" colspan="5">Total (F CFA)</td>
+                        <td><input type="text" name="" id="total" /></td>
+                    </tr>
+                    <tr>
+                        <td class="colspan" colspan="5">Total des Frais déja perçus (F CFA)</td>
+                        <td><input type="text" name="" id="total_des_frais_dé*eja_percus" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="colspan" colspan="5">Solde à renverser à la caisse (F CFA)
+                        </td>
+                        <td><input type="text" name="" id="solde_a_renverser_a_la_caisse" />
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Reference de la transaction</th>
+                        <th>Visa de demandeur</th>
+                        <th>Visa superieur hierachique n+1</th>
+                        <th>Visa controleur interne</th>
+                        <th>Visa service engagement</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="" id="reference_de_la_transaction" /></td>
+                        <td><input type="text" name="" id="visa_de_demandeur" /></td>
+                        <td><input type="text" name="" id="visa_superieur_hierachique_n+1" />
+                        </td>
+                        <td><input type="text" name="" id="visa_controleur_interne" /></td>
+                        <td><input type="text" name="" id="visa_service_engagement" /></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset class="form-elts">
+                <legend>Frais de mission</legend>
+            </fieldset>
+        </div>
+        <div class="note note-bas">
+            NB: Le nombre total de jours accordés au titre des permissions exceptionnelles elt
+            limité à 10 jours ouvrables par employé et par an
+        </div>
+        <div class="input-optn">
+            <input class="Submit" type="submit" value="Annuler demande" />
+            <input class="Submit" id="validate" type="submit" value="Valider" />
+        </div>
+    </form>
+</div>
